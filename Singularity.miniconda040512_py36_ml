@@ -38,12 +38,10 @@ From: jtchilders/singularity_image_recipes:mpich33
 
    MINICONDA_INSTALL_FILE=Miniconda$CONDAVER-$VERSION-Linux-x86_64.sh
 
-   if [ ! -f $DOWNLOAD_PATH/$MINICONDA_INSTALL_FILE ]; then
-      echo Downloading miniconda installer
-      wget https://repo.continuum.io/miniconda/$MINICONDA_INSTALL_FILE -P $DOWNLOAD_PATH
+   echo Downloading miniconda installer
+   wget https://repo.continuum.io/miniconda/$MINICONDA_INSTALL_FILE -P $DOWNLOAD_PATH
       
-      chmod +x $DOWNLOAD_PATH/Miniconda$CONDAVER-$VERSION-Linux-x86_64.sh
-   fi
+   chmod +x $DOWNLOAD_PATH/Miniconda$CONDAVER-$VERSION-Linux-x86_64.sh
 
    echo Installing Miniconda
    $DOWNLOAD_PATH/Miniconda$CONDAVER-$VERSION-Linux-x86_64.sh -b -p $PREFIX_PATH -u
@@ -57,6 +55,9 @@ From: jtchilders/singularity_image_recipes:mpich33
 
    echo CONDA BINARY: $(which conda)
    echo CONDA VERSION: $(conda --version)
+   
+   echo Setting intel channel to the primary
+   conda config --add channels intel
 
    echo install tensorflow dependencies and other things
    conda install -y tensorflow -c intel
