@@ -26,4 +26,4 @@ TOTAL_RANKS=$(( $COBALT_JOBSIZE * $RANKS_PER_NODE ))
 # this simply runs the command 'ldd /myapp/pi' inside the container and should show that
 # the app is running agains the host machines Cray libmpi.so not the one inside the container
 # run my contianer like an application, which will run '/myapp/pi'
-aprun -n $TOTAL_RANKS -N $RANKS_PER_NODE singularity run -B /opt:/opt:ro -B /var/opt:/var/opt:ro $CONTAINER
+aprun -n $TOTAL_RANKS -N $RANKS_PER_NODE singularity run -B /opt:/opt:ro $CONTAINER
