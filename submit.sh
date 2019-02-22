@@ -7,8 +7,6 @@
 # pass container as first argument to script
 CONTAINER=$1
 
-# app build with GNU not Intel
-module swap PrgEnv-intel PrgEnv-gnu
 # Use Cray's Application Binary Independent MPI build
 module swap cray-mpich cray-mpich-abi
 
