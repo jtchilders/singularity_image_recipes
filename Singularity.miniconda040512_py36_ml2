@@ -13,7 +13,6 @@ From: jtchilders/singularity_image_recipes:miniconda040512_py36_ml
    echo install h5py
    conda install -y h5py
 
-
 %environment
    export PATH=/miniconda3/4.5.12/bin:$PATH
 
