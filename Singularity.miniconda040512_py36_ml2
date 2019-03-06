@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: jtchilders/singularity_image_recipes:miniconda040512_py36_ml2
+From: jtchilders/singularity_image_recipes:miniconda040512_py36_ml
 
 %post
    # setup MPICH 
