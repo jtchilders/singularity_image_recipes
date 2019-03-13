@@ -1,0 +1,24 @@
+Bootstrap: shub
+From: jtchilders/singularity_image_recipes:miniconda040512_py36_ml
+
+%post
+   # setup MPICH 
+   export PATH=$PATH:/mpich/install/bin
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mpich/install/lib
+
+   #####
+   #  miniconda install
+   ############
+   export PATH=/miniconda3/4.5.12/bin:$PATH
+   conda install -y google-sparsehash
+   conda install -y -c anaconda pillow
+
+   cd /
+   git clone git@github.com:facebookresearch/SparseConvNet.git
+   cd /SparseConvNet
+   python setup.py develop
+   python setup.py install
+
+%environment
+   export PATH=/miniconda3/4.5.12/bin:$PATH
+
