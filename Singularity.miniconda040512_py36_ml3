@@ -13,9 +13,9 @@ From: jtchilders/singularity_image_recipes:miniconda040512_py36_ml
    conda install -y -c bioconda google-sparsehash
    conda install -y -c anaconda pillow
 
-   cd /
-   git clone https://github.com/facebookresearch/SparseConvNet.git
+   mkdir /SparseConvNet
    cd /SparseConvNet
+   git clone https://github.com/facebookresearch/SparseConvNet.git .
    python setup.py develop
    python setup.py install
 
