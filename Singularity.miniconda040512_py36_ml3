@@ -10,7 +10,7 @@ From: jtchilders/singularity_image_recipes:miniconda040512_py36_ml
    #  miniconda install
    ############
    export PATH=/miniconda3/4.5.12/bin:$PATH
-   conda install -y google-sparsehash
+   conda install -y -c bioconda google-sparsehash
    conda install -y -c anaconda pillow
 
    cd /
