@@ -8,6 +8,8 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    cp example_codes/mnist.npz $SINGULARITY_ROOTFS/test
 
 %post
+   yum install -y bzip2
+
    # setup devtoolset6
    scl enable devtoolset-6 bash
    
