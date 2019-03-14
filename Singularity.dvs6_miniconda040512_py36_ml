@@ -53,8 +53,8 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    echo CONDA BINARY: $(which conda)
    echo CONDA VERSION: $(conda --version)
    
-   echo Setting intel channel to the primary
-   conda config --add channels intel
+   #echo Setting intel channel to the primary
+   #conda config --add channels intel
 
    echo install tensorflow dependencies and other things
    conda install -y tensorflow -c intel
