@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: jtchilders/singularity_image_recipes:mpich33
+From: jtchilders/singularity_image_recipes:dvs6_mpich33
 
 %setup
    mkdir ${SINGULARITY_ROOTFS}/test
