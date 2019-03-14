@@ -68,7 +68,12 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    conda install -y pytorch-cpu torchvision-cpu -c pytorch
 
    echo install mpi4py
-   conda install -y mpi4py
+   mkdir /mpi4py
+   cd /mpi4py
+   git clone https://github.com/mpi4py/mpi4py.git .
+   git checkout tags/3.0.1
+   python setup.py build
+   python setup.py install
 
    # install keras and horovod
    echo install horovod
