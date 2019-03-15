@@ -67,26 +67,6 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    echo install pytorch
    conda install -y pytorch-cpu torchvision-cpu -c pytorch
 
-   echo install cython
-   mkdir /cython
-   cd /cython
-   git clone https://github.com/cython/cython.git .
-   git checkout 0.29.6
-   CFLAGS='-I/miniconda3/4.5.12/include' CXXFLAGS='-I/miniconda3/4.5.12/include' python setup.py build
-   python setup.py install
-
-   echo install mpi4py
-   mkdir /mpi4py
-   cd /mpi4py
-   git clone https://github.com/mpi4py/mpi4py.git .
-   git checkout tags/3.0.1
-   python setup.py build
-   python setup.py install
-
-   # install keras and horovod
-   echo install horovod
-   pip install horovod
-
 %environment
    export PATH=/miniconda3/4.5.12/bin:$PATH
 
