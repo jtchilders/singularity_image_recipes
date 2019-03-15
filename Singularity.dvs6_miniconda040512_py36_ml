@@ -72,7 +72,7 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    cd /cython
    git clone https://github.com/cython/cython.git .
    git checkout 0.29.6
-   python setup.py build
+   CFLAGS='-I/miniconda3/4.5.12/include' CXXFLAGS='-I/miniconda3/4.5.12/include' python setup.py build
    python setup.py install
 
    echo install mpi4py
