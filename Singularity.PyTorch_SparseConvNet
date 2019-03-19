@@ -1,7 +1,6 @@
 Bootstrap: shub
 From: jtchilders/singularity_image_recipes:dvs6_miniconda040512_py36_ml3
 
-
 %post
    # setup devtoolset6
    scl enable devtoolset-6 bash
