@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: jtchilders/singularity_image_recipes:dvs6_miniconda040512_py36_ml3
+From: jtchilders/singularity_image_recipes:dvs6_miniconda040512_py36_ml2
 
 %post
    # setup devtoolset6
