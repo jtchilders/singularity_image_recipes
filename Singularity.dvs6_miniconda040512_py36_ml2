@@ -6,7 +6,6 @@ From: jtchilders/singularity_image_recipes:dvs6_miniconda040512_py36_ml
    # setup devtoolset6
    scl enable devtoolset-6 bash
    
-
    # setup MPICH 
    export PATH=$PATH:/mpich/install/bin
    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mpich/install/lib
