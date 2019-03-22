@@ -55,9 +55,6 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    echo CONDA BINARY: $(which conda)
    echo CONDA VERSION: $(conda --version)
    
-   #echo Setting intel channel to the primary
-   #conda config --add channels intel
-
    echo install tensorflow dependencies and other things
    conda install -y tensorflow -c intel
 
@@ -66,6 +63,9 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    
    echo install pytorch
    conda install -y pytorch-cpu torchvision-cpu -c pytorch
+
+   echo install other data science modules
+   conda install -y pandas matplotlib
 
 %environment
    export PATH=/miniconda3/4.5.12/bin:$PATH
