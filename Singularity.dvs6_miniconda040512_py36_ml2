@@ -33,6 +33,7 @@ From: jtchilders/singularity_image_recipes:dvs6_miniconda040512_py36_ml
    echo install horovod
    pip install horovod
 
+
 %environment
    export PATH=/miniconda3/4.5.12/bin:$PATH
 
