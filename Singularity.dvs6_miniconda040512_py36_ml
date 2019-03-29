@@ -65,7 +65,7 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    conda install -y pytorch-cpu torchvision-cpu -c pytorch
 
    echo install other data science modules
-   conda install -y pandas matplotlib
+   conda install -y pandas matplotlib scikit-learn scikit-image
 
 %environment
    export PATH=/miniconda3/4.5.12/bin:$PATH
