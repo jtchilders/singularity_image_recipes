@@ -20,9 +20,7 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
 
    #####
    #  miniconda install
-   ############
-
-   
+   ############  
    
    # change this if you want different versions
    CONDAVER=3
@@ -48,7 +46,6 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    # add conda to environment
    export PATH=$PATH:$PREFIX_PATH/bin
 
-
    echo moving into $PREFIX_PATH
    cd $PREFIX_PATH
 
@@ -65,7 +62,7 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    conda install -y pytorch-cpu torchvision-cpu -c pytorch
 
    echo install other data science modules
-   conda install -y pandas matplotlib scikit-learn scikit-image
+   conda install -y pandas matplotlib scikit-learn scikit-image h5py
 
 %environment
    export PATH=/miniconda3/4.5.12/bin:$PATH
