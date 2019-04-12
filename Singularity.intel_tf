@@ -22,8 +22,8 @@ From: intelaipg/intel-optimized-tensorflow:latest-devel-mkl-py3
    cd /cython
    git clone https://github.com/cython/cython.git .
    git checkout 0.29.6
-   CFLAGS='-I/miniconda3/4.5.12/include' CXXFLAGS='-I/miniconda3/4.5.12/include' /miniconda3/4.5.12/bin/python setup.py build
-   CFLAGS='-I/miniconda3/4.5.12/include' CXXFLAGS='-I/miniconda3/4.5.12/include' /miniconda3/4.5.12/bin/python setup.py install
+   CFLAGS='-I/usr/include' CXXFLAGS='-I/usr/include' python setup.py build
+   CFLAGS='-I/usr/include' CXXFLAGS='-I/usr/include' python setup.py install
 
    echo install mpi4py
    mkdir /mpi4py
