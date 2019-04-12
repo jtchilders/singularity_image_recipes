@@ -49,6 +49,9 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    echo moving into $PREFIX_PATH
    cd $PREFIX_PATH
 
+   conda  config --add channels intel
+   conda update --all -y
+
    echo CONDA BINARY: $(which conda)
    echo CONDA VERSION: $(conda --version)
    
