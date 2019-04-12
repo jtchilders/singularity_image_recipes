@@ -3,7 +3,6 @@ From: intelaipg/intel-optimized-tensorflow:latest-devel-mkl-py3
 
 
 %post
-   yum install -y wget
 
    MPICH_VERSION=3.3
    echo installing mpich $MPICH_VERSION
