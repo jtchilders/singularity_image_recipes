@@ -17,7 +17,7 @@ From: jtchilders/singularity_image_recipes:dvs6_py36
    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mpich/install/lib
    
    echo install ML modules
-   pip3.6 install tensorflow torch torch-vision matplotlib h5py pandas scikit-learn scikit-image 
+   pip3.6 install tensorflow torch torch-vision matplotlib h5py pandas scikit-learn scikit-image horovod 
    
 
 %runscript
