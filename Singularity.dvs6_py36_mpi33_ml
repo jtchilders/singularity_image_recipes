@@ -1,0 +1,26 @@
+Bootstrap: shub
+From: jtchilders/singularity_image_recipes:dvs6_py36
+
+%setup
+   # copy test script to container
+   mkdir $SINGULARITY_ROOTFS/myapp
+   cp example_codes/pi.py $SINGULARITY_ROOTFS/myapp
+
+%post
+   yum install -y wget
+   echo setting up devtoolset6
+   # setup devtoolset6
+   scl enable devtoolset-6 bash
+   
+   # add mpich to environment
+   export PATH=$PATH:/mpich/install/bin
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mpich/install/lib
+   
+   echo install ML modules
+   pip3.6 install tensorflow pytorch torchvision matplotlib h5py pandas scikit-learn scikit-image 
+   
+
+%runscript
+   python3.6 /myapp/pi.py
+
+
