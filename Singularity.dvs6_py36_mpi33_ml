@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: jtchilders/singularity_image_recipes:dvs6_py36
+From: jtchilders/singularity_image_recipes:dvs6_py36_mpich
 
 %setup
    # copy test script to container
