@@ -3,8 +3,9 @@ From: jtchilders/singularity_image_recipes:dvs6_py36_mpi33
 
 %setup
    # copy test script to container
-   mkdir $SINGULARITY_ROOTFS/myapp
-   cp example_codes/pi.py $SINGULARITY_ROOTFS/myapp
+   mkdir $SINGULARITY_ROOTFS/test
+   cp example_codes/keras_mnist.py $SINGULARITY_ROOTFS/test
+   cp example_codes/mnist.npz $SINGULARITY_ROOTFS/test
 
 %post
    yum install -y wget
@@ -23,6 +24,6 @@ From: jtchilders/singularity_image_recipes:dvs6_py36_mpi33
    
 
 %runscript
-   python3.6 /myapp/pi.py
+   python3.6 /test/keras_mnist.py
 
 
