@@ -32,10 +32,12 @@ From: intelaipg/intel-optimized-tensorflow:latest-devel-mkl-py3
    git checkout tags/3.0.1
    CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx python setup.py build
    python setup.py install
+   
+
 
    # install keras and horovod
    echo install horovod
-   pip install horovod 
+   HOROVOD_WITHOUT_PYTORCH=1 HOROVOD_WITHOUT_MXNET=1 HOROVOD_WITH_TENSORFLOW=1 CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx pip install horovod 
 
 
 
