@@ -6,6 +6,9 @@ From: jtchilders/singularity_image_recipes:dvs6_py36_mpi33
    mkdir $SINGULARITY_ROOTFS/test
    cp example_codes/keras_mnist.py $SINGULARITY_ROOTFS/test
    cp example_codes/mnist.npz $SINGULARITY_ROOTFS/test
+   git clone https://github.com/horovod/horovod.git $SINGULARITY_ROOTFS/horovod --recursive
+   cd $SINGULARITY_ROOTFS/horovod
+   git checkout tags/v0.16.1
 
 %post
    yum install -y wget
@@ -20,9 +23,7 @@ From: jtchilders/singularity_image_recipes:dvs6_py36_mpi33
    echo install ML modules
    pip3.6 install tensorflow torch torch-vision matplotlib h5py pandas scikit-learn scikit-image mxnet psutil cffi cloudpickle pycparser
    
-   git clone https://github.com/horovod/horovod.git /horovod --recursive
    cd /horovod
-   git checkout tags/v0.16.1
 
    HOROVOD_WITH_TENSORFLOW=1 HOROVOD_WITH_PYTORCH=1 CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx python3.6 setup.py build
    HOROVOD_WITH_TENSORFLOW=1 HOROVOD_WITH_PYTORCH=1 CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx python3.6 setup.py install
