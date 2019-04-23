@@ -24,9 +24,14 @@ From: jtchilders/singularity_image_recipes:dvs6_py36_mpi33
    pip3.6 install tensorflow torch torch-vision matplotlib h5py pandas scikit-learn scikit-image mxnet psutil cffi cloudpickle pycparser
    
    cd /horovod
-
+   
+   echo build horovod
    HOROVOD_WITH_TENSORFLOW=1 HOROVOD_WITH_PYTORCH=1 CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx python3.6 setup.py build
+   echo install horovod
    HOROVOD_WITH_TENSORFLOW=1 HOROVOD_WITH_PYTORCH=1 CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx python3.6 setup.py install
+   
+   echo print ldd
+   ldd /horovod/build/lib.linux-x86_64-3.6/horovod/tensorflow/mpi_lib.cpython-36m-x86_64-linux-gnu.so
 
    
 
