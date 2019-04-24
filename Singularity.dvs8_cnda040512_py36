@@ -9,8 +9,8 @@ From: centos
    yum install -y java-1.8.0-openjdk-devel.x86_64
 
 
-   echo setting up devtoolset6
-   scl enable devtoolset-6 bash
+   echo setting up devtoolset-8
+   scl enable devtoolset-8 bash
    
    MPICH_VERSION=3.3
    echo installing mpich $MPICH_VERSION
