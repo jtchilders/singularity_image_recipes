@@ -8,7 +8,7 @@ From: jtchilders/singularity_image_recipes:py36
    yum install -y gcc gcc-c++
    
    echo install ML modules
-   pip3.6 install tensorflow torch torch-vision matplotlib h5py pandas scikit-learn scikit-image mxnet psutil cffi cloudpickle pycparser
+   pip3.6 install tensorflow torch torch-vision matplotlib h5py pandas scikit-learn scikit-image mxnet psutil cffi cloudpickle pycparser mkl mkl-dnn
    
 
 
