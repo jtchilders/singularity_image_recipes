@@ -8,7 +8,7 @@ From: jtchilders/singularity_image_recipes:py36_ml_mpi33
 
    echo install horovod
 
-   HOROVOD_WITH_TENSORFLOW=1 HOROVOD_WITH_PYTORCH=1 HOROVOD_WITHOUT_MXNET=1 CC=mpicc CXX=mpicxx pip install horovod
+   HOROVOD_WITH_TENSORFLOW=1 HOROVOD_WITH_PYTORCH=1 HOROVOD_WITHOUT_MXNET=1 CC=mpicc CXX=mpicxx pip3.6 install horovod
    
 
 
