@@ -76,3 +76,8 @@ From: centos
    echo install horovod
    pip install horovod
 
+%environment
+   export PATH=/miniconda3/4.5.12/bin:$PATH
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mpich/install/lib
+
+
