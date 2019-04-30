@@ -5,7 +5,7 @@ From: centos
 %post
    # install development tools
    yum update -y
-   yum wget bzip2
+   yum install -y wget bzip2
 
    #####
    #  miniconda install
