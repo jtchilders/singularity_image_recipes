@@ -25,7 +25,7 @@ From: centos
    
    # setup MPICH 
    export PATH=$PATH:/mpich/install/bin
-   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mpich/install/libp
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mpich/install/lib
    
    #####
    #  miniconda install
