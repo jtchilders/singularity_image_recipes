@@ -56,6 +56,7 @@ From: centos
 
    echo install gcc
    conda install -y gcc_linux-64 gxx_linux-64
+   find $PREFIX_PATH/bin -type f -name "x86_64-conda_cos6-linux-gnu-*" -exec bash -c "python -c \"print('{}'.split('linux-gnu-')[-1])\" | xargs -I file ln -s {} $PREFIX_PATH/bin/file" \;
 
    echo which gcc: $(which gcc)
    echo which g++: $(which g++)
