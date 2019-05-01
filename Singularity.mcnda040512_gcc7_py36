@@ -81,7 +81,7 @@ From: centos
 
    # install keras and horovod
    echo install horovod
-   pip install horovod
+   CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx pip install --no-cache-dir horovod
 
 %environment
    export PATH=/miniconda3/4.5.12/bin:$PATH
