@@ -5,7 +5,7 @@ From: centos
 %post
    # install development tools
    yum update -y
-   yum install -y wget bzip2
+   yum install -y wget bzip2 which
 
    #####
    #  miniconda install
@@ -58,8 +58,8 @@ From: centos
    conda install -y gcc_linux-64 gxx_linux-64
    find $PREFIX_PATH/bin -type f -name "x86_64-conda_cos6-linux-gnu-*" -exec bash -c "python -c \"print('{}'.split('linux-gnu-')[-1])\" | xargs -I file ln -s {} $PREFIX_PATH/bin/file" \;
 
-   echo which gcc: $(which gcc)
-   echo which g++: $(which g++)
+   echo which gcc: $(/bin/which gcc)
+   echo which g++: $(/bin/which g++)
    echo gcc version
    gcc --version
 
