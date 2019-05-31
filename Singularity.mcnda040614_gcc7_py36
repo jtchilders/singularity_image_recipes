@@ -13,7 +13,7 @@ From: centos
    
    # change this if you want different versions
    CONDAVER=3
-   VERSION=4.5.14
+   VERSION=4.6.14
    BASE_DIR=/miniconda$CONDAVER
    PREFIX_PATH=$BASE_DIR/$VERSION
    DOWNLOAD_PATH=$BASE_DIR/DOWNLOADS

@@ -19,8 +19,8 @@ From: jtchilders/singularity_image_recipes:dvs6_miniconda040512_py36_ml2
    mkdir /SparseConvNet
    cd /SparseConvNet
    export INSTALL_PREFIX=/miniconda3/4.5.12
-   git clone https://github.com/coreyjadams/SparseConvNet.git  .
-   python setup.py develop
+   git clone https://github.com/facebookresearch/SparseConvNet.git  .
+   CFLAGS='-march=knl -O3' CXXFLAGS='-march=knl -O3' python setup.py develop
    python setup.py install
 
 
