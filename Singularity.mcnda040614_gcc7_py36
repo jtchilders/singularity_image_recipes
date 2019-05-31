@@ -5,7 +5,7 @@ From: centos
 %post
    # install development tools
    yum update -y
-   yum install -y wget bzip2 which make libfabric
+   yum install -y wget bzip2 which make libfabric git
 
    #####
    #  miniconda install
