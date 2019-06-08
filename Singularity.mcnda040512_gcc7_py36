@@ -53,9 +53,13 @@ From: centos
    
    echo install pytorch
    conda install -y pytorch-cpu torchvision-cpu -c pytorch
+   
+   echo install ML support packages
+   conda install -y tensorboardX sklearn pandas h5py matplotlib scikit-learn scikit-image 
 
    echo install gcc
    conda install -y gcc_linux-64 gxx_linux-64
+   echo make symlinks from the long executable names to the standard short ones
    find $PREFIX_PATH/bin -type f -name "x86_64-conda_cos6-linux-gnu-*" -exec bash -c "python -c \"print('{}'.split('linux-gnu-')[-1])\" | xargs -I file ln -s {} $PREFIX_PATH/bin/file" \;
 
    echo which gcc: $(/bin/which gcc)
