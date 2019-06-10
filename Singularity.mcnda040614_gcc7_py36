@@ -50,6 +50,7 @@ From: centos
 
    echo install keras
    conda install -y keras pandas h5py matplotlib scikit-learn scikit-image
+   pip install tensorboardX
    
    echo install pytorch
    conda install -y pytorch-cpu torchvision-cpu -c pytorch

@@ -55,7 +55,8 @@ From: centos
    conda install -y pytorch-cpu torchvision-cpu -c pytorch
    
    echo install ML support packages
-   conda install -y tensorboardX sklearn pandas h5py matplotlib scikit-learn scikit-image 
+   conda install -y  pandas h5py matplotlib scikit-learn scikit-image
+   pip install tensorboardX
 
    echo install gcc
    conda install -y gcc_linux-64 gxx_linux-64
