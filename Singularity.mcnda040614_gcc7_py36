@@ -95,7 +95,7 @@ From: centos
 
    # install keras and horovod
    echo install horovod
-   HOROVOD_WITHOUT_PYTORCH=1 HOROVOD_WITHOUT_MXNET=1 HOROVOD_WITH_TENSORFLOW=1 CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx pip install --no-cache-dir horovod
+   HOROVOD_WITH_PYTORCH=1 HOROVOD_WITHOUT_MXNET=1 HOROVOD_WITH_TENSORFLOW=1 CC=/mpich/install/bin/mpicc CXX=/mpich/install/bin/mpicxx pip install --no-cache-dir horovod
 
 %environment
    export PATH=/miniconda3/4.6.14/bin:$PATH
