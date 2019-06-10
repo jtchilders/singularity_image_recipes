@@ -1,7 +1,6 @@
 Bootstrap: docker
 From: centos
 
-
 %post
    # install development tools
    yum update -y
