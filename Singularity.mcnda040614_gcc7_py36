@@ -56,7 +56,7 @@ From: centos
    conda install -y pytorch-cpu torchvision-cpu -c pytorch
 
    echo install gcc
-   conda install -y gcc_linux-64 gxx_linux-64
+   conda install -y gcc_linux-64 gxx_linux-64 gfortran_linux-64
    find $PREFIX_PATH/bin -type f -name "x86_64-conda_cos6-linux-gnu-*" -exec bash -c "python -c \"print('{}'.split('linux-gnu-')[-1])\" | xargs -I file ln -s {} $PREFIX_PATH/bin/file" \;
 
    echo which gcc: $(/bin/which gcc)
