@@ -5,6 +5,9 @@ From: jtchilders/singularity_image_recipes:dvs6_mpich33
    # install development tools
    yum update -y
    yum install -y wget bzip2 which make libfabric git
+   
+   # setup devtoolset6
+   scl enable devtoolset-6 bash
 
    #####
    #  miniconda install
